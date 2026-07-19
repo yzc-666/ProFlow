@@ -49,8 +49,9 @@ If you find this work useful, please cite:
 
 ```bibtex
 @article{yu2026proflow,
-  title   = {ProFlow: Zero-Shot Physics-Consistent Sampling via Proximal Flow Guidance},
-  author  = {Yu, Zichao and Li, Ming and Zhang, Wenyi and Zou, Difan and Gao, Weiguo},
-  year    = {2026}
+  title={ProFlow: Zero-Shot Physics-Consistent Sampling via Proximal Flow Guidance},
+  author={Yu, Zichao and Li, Ming and Zhang, Wenyi and Zou, Difan and Gao, Weiguo},
+  journal={arXiv preprint arXiv:2601.20227},
+  year={2026}
 }
 ```
