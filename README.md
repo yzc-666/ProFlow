@@ -43,24 +43,6 @@ CUDA_VISIBLE_DEVICES=0 python evaluate.py
 
 Supported tasks include forward problems (Poisson, Helmholtz, Darcy), joint reconstruction from 50% random observations (Darcy), and sparse-time observation for viscous Burgers'.
 
-### 3. Benchmarks
-
-```bash
-python benchmark_runtime.py       # runtime comparison across samplers
-python benchmark_sensitivity.py   # sensitivity to K, lambda_obs, lambda_pde, sampling steps
-```
-
-Results (RE, PDE error, wall-clock time) are aggregated as mean ± std and exported to CSV.
-
-## Key Hyperparameters
-
-| Parameter | Meaning | Default |
-|---|---|---|
-| `terminal_iters` (K) | inner proximal optimization steps | 3 (elliptic) / 1 (Burgers) |
-| `lambda_obs` | observation-consistency weight / step size | 100 (elliptic) / 14 (Burgers) |
-| `lambda_pde` | physics-consistency weight / step size | 1e-3 (elliptic) / 0.1 (Burgers) |
-| `sampling_steps` (N) | number of flow integration steps | 100 |
-
 ## Citation
 
 If you find this work useful, please cite:
