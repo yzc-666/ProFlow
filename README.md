@@ -11,30 +11,6 @@ Inferring physical fields from sparse observations while respecting the governin
 
 The procedure admits a Bayesian interpretation as a sequence of local maximum a posteriori (MAP) updates. On Poisson, Helmholtz, Darcy, and viscous Burgers' benchmarks, ProFlow achieves superior physical and observational consistency, as well as more accurate distributional statistics, compared to state-of-the-art diffusion- and flow-based baselines (ECI, DiffusionPDE, D-Flow, PCFM, etc.).
 
-## Repository Structure
-
-```
-├── config/                 # Per-task training/sampling configs
-│   ├── poisson_config.py
-│   ├── helmholtz_config.py
-│   ├── darcy_config.py
-│   ├── burger_config.py
-│   └── ns_config.py
-├── models/                 # Network architectures (FNO backbone)
-├── mydatasets/             # Dataset definitions and PDE constraints
-│   ├── poisson.py / helmholtz.py / darcy.py / burger.py / ns.py
-│   └── constraints.py      # PDE residual operators
-├── flow.py                 # Rectified flow + all sampling algorithms
-│                           #   - ProFlow: ours1_sample_ode (elliptic), ours_sample_odeburger (Burgers)
-│                           #   - Baselines: ECI, DPS/DiffusionPDE, D-Flow, PCFM
-├── train.py                # Train the unconditional flow prior
-├── train_rectified.py      # Rectified-flow (reflow) training
-├── evaluate.py             # Evaluation entry (RE / PDE error metrics)
-├── benchmark_runtime.py    # Per-sample wall-clock benchmarking
-├── benchmark_sensitivity.py# Hyperparameter sensitivity sweeps
-└── run.sh / train.sh       # Convenience launch scripts
-```
-
 ## Installation
 
 ```bash
